@@ -10,6 +10,7 @@
   <properties>
     <spring.version>6.1.12</spring.version>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -71,6 +72,14 @@
 
   </dependencies>
   <build>
-    <finalName>SpringMVCApp</finalName>
+    <finalName>BackendTechnologies</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+
+      </plugin>
+    </plugins>
   </build>
 </project>

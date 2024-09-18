@@ -1,4 +1,6 @@
-FROM openjdk:22-jdk-slim-bullseye
-WORKDIR /app
-COPY /out/artifacts/FirstDocker_jar/FirstDocker.jar /app/phrases.jar
-ENTRYPOINT ["java", "-jar", "phrases.jar"]
+FROM tomcat:10.1.28-jdk21
+WORKDIR /usr/local/tomcat
+COPY target/BackendTechnologies.war /usr/local/tomcat/webapps/ROOT.war
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
